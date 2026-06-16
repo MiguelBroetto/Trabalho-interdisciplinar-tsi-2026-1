@@ -1,0 +1,278 @@
+/* ============================================
+   CSS da página inicial
+   ============================================ */
+
+.intro {
+    text-align: center;
+    width: 100%;
+    padding: var(--espaco-extra) var(--espaco-grande);
+    margin-bottom: var(--espaco-extra);
+    border-radius: var(--borda-radius-grande);
+}
+
+.cont_intro {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: var(--espaco-medio);
+}
+
+.cont_intro p {
+    text-align: justify;
+    margin-bottom: var(--espaco-medio);
+}
+
+.subtitulo {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#imgElvis {
+    width: 70%;
+    border-radius: var(--borda-radius-grande);
+    margin-top: var(--espaco-medio);
+    border: 3px solid var(--cor-branco);
+}
+
+.descri {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: var(--espaco-extra);
+    background-color: var(--cor-branco);
+    border-radius: var(--borda-radius-grande);
+    box-shadow: var(--sombra-media);
+}
+
+.destaque {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--cor-primaria-clara);
+}
+
+.artista-card {
+    text-align: center;
+    background-color: var(--cor-branco);
+    border-radius: var(--borda-radius-grande);
+    padding: var(--espaco-grande);
+    margin: var(--espaco-medio) auto;
+    width: 80%;
+    box-shadow: var(--sombra-media);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #ddd;
+    position: relative;
+    overflow: hidden;
+}
+
+.artista-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background-color: var(--cor-primaria);
+    transition: width 0.3s ease;
+}
+
+.artista-card:hover::before {
+    width: 10px;
+}
+
+.artista-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-forte);
+}
+
+.artista-nome {
+    font-size: 1.3rem;
+    margin-bottom: var(--espaco-medio);
+    color: var(--cor-primaria);
+}
+
+#titulo-depo {
+    text-align: center;
+}
+
+.depoimentos p {
+    margin-top: 10px;
+    margin-left: 10%;
+}
+
+.depoimentos h3{
+    text-align: center;
+}
+
+.depoimentos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    max-width: 60%;
+    margin: 0 auto;
+    grid-gap: 20px;
+    border-radius: 10px;
+}
+
+.cards-depo {
+    background-color: gray;
+    border-radius: 10px;
+    height: 100%;
+    color: white;
+}
+
+/* TABELA */
+.tabela {
+    width: 80%;
+    margin: var(--espaco-extra) auto;
+    padding: var(--espaco-medio);
+    background-color: var(--cor-branco);
+    border-radius: var(--borda-radius-grande);
+    border: 1px solid #ddd;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: var(--espaco-pequeno) var(--espaco-medio);
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+}
+
+tfoot td {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+/* RODAPÉ DA PÁGINA */
+.rodape {
+    text-align: center;
+    background-color: var(--cor-secundaria);
+    padding: var(--espaco-extra);
+    margin-top: var(--espaco-extra);
+    border-radius: var(--borda-radius-grande);
+}
+
+.rodape a {
+    display: inline-block;
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+    text-decoration: none;
+    padding: var(--espaco-pequeno) var(--espaco-grande);
+    border-radius: var(--borda-radius-pequeno);
+    margin: var(--espaco-pequeno) 0;
+    transition: background-color 0.3s ease;
+}
+
+.rodape a:hover {
+    background-color: var(--cor-primaria-clara);
+}
+
+/* MOBILE */
+/* ============================================
+   RESPONSIVIDADE MOBILE
+============================================ */
+
+@media (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    /* HEADER */
+    .cabecalho {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+
+    #titulo-principal {
+        font-size: 1.5rem;
+        white-space: normal;
+    }
+
+    /* MENU */
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    nav a {
+        text-decoration: none;
+        font-size: 0.85rem;
+        padding: 8px 12px;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 12px;
+        white-space: nowrap;
+    }
+
+    /* CONTEÚDO */
+    .cont_intro,
+    .artista-card,
+    .tabela,
+    .descri {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .intro {
+        padding: 15px;
+    }
+
+    #imgElvis {
+        width: 100%;
+        height: auto;
+    }
+
+    table {
+        font-size: 0.85rem;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+}
+
+/* CELULARES PEQUENOS */
+@media (max-width: 480px) {
+
+    #titulo-principal {
+        font-size: 1.2rem;
+    }
+
+    nav {
+        gap: 6px;
+    }
+
+    nav a {
+        font-size: 0.75rem;
+        padding: 6px 10px;
+    }
+
+    .subtitulo {
+        font-size: 1.1rem;
+    }
+
+    .destaque {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+}

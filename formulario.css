@@ -1,0 +1,138 @@
+/* ============================================
+   SLIDE 27 - ESTILIZAÇÃO DE FORMULÁRIOS
+   ============================================ */
+
+/* CONTAINER DO FORMULÁRIO */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: var(--espaco-extra);
+}
+
+#imgForm{
+    margin-left: 37%;
+    margin-top: 20px;
+}
+
+/* FORMULÁRIO COM FLEXBOX COLUMN */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-medio);
+    background-color: var(--cor-branco);
+    padding: var(--espaco-extra);
+    border-radius: var(--borda-radius-grande);
+    box-shadow: var(--sombra-media);
+}
+
+/* LABELS */
+label {
+    font-weight: bold;
+    margin-bottom: var(--espaco-pequeno);
+    color: var(--cor-primaria);
+}
+
+/* INPUTS - ESTILO BASE */
+input, select, textarea {
+    padding: var(--espaco-pequeno) var(--espaco-medio);
+    border: 2px solid #ddd;
+    border-radius: var(--borda-radius-pequeno);
+    font-size: var(--tamanho-normal);
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+/* SLIDE 27 - :focus (campo com foco) */
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 3px rgba(30, 60, 114, 0.2);
+}
+
+/* SLIDE 27 - :valid e :invalid (validação visual) */
+input:valid {
+    border-color: var(--cor-sucesso);
+}
+
+input:invalid:not(:placeholder-shown) {
+    border-color: var(--cor-erro);
+}
+
+/* CHECKBOXES E RADIOS */
+input[type="radio"], input[type="checkbox"] {
+    width: auto;
+    margin-right: var(--espaco-pequeno);
+}
+
+/* SLIDE 21 - :first-child nos radios */
+input[type="radio"]:first-of-type {
+    margin-left: 0;
+}
+
+/* BOTÃO DE ENVIO */
+input[type="submit"] {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+    border: none;
+    cursor: pointer;
+    padding: var(--espaco-medio);
+    font-size: var(--tamanho-normal);
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin-top: var(--espaco-medio);
+}
+
+/* SLIDE 21 - :hover e :active no botão */
+input[type="submit"]:hover {
+    background-color: var(--cor-primaria-clara);
+    transform: translateY(-2px);
+}
+
+input[type="submit"]:active {
+    transform: translateY(0);
+}
+
+/* RADIO E CHECKBOX GROUPS */
+.radio-group, .checkbox-group {
+    margin-bottom: var(--espaco-pequeno);
+}
+
+.radio-group label, .checkbox-group label {
+    font-weight: normal;
+    margin-right: var(--espaco-medio);
+}
+
+/* SELECT ESTILIZADO */
+select {
+    background-color: var(--cor-branco);
+    cursor: pointer;
+}
+
+/* TEXTAREA */
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* SLIDE 27 - MENSAGEM DE ERRO VISUAL */
+.error-message {
+    color: var(--cor-erro);
+    font-size: var(--tamanho-pequeno);
+    margin-top: -10px;
+    margin-bottom: var(--espaco-pequeno);
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .form-container {
+        padding: var(--espaco-medio);
+    }
+    
+    form {
+        padding: var(--espaco-medio);
+    }
+    
+    input, select, textarea {
+        padding: var(--espaco-pequeno);
+    }
+}

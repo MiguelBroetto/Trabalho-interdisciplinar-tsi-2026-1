@@ -1,0 +1,87 @@
+/* ============================================
+   CSS para páginas de artistas
+   (elvis.html, beatles.html, michael.html, simone.html)
+   ============================================ */
+
+/* CONTEÚDO PRINCIPAL */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: var(--espaco-grande);
+}
+
+/* SEÇÕES */
+section {
+    background-color: var(--cor-branco);
+    margin-bottom: var(--espaco-extra);
+    padding: var(--espaco-grande);
+    border-radius: var(--borda-radius-grande);
+    box-shadow: var(--sombra-leve);
+}
+
+/* LISTAS */
+ul {
+    margin-left: var(--espaco-extra);
+    margin-bottom: var(--espaco-medio);
+}
+
+li {
+    margin-bottom: var(--espaco-pequeno);
+    padding-left: var(--espaco-pequeno);
+}
+
+/* SLIDE 21 - :last-child na lista */
+li:last-child {
+    margin-bottom: 0;
+}
+
+/* IFRAMES */
+iframe {
+    display: block;
+    max-width: 100%;
+    margin: var(--espaco-medio) auto;
+    border-radius: var(--borda-radius-medio);
+}
+
+/* SLIDE 20 - POSITION: RELATIVE + ABSOLUTE (exemplo) */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: var(--borda-radius-medio);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* LINKS */
+a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--cor-primaria-clara);
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: var(--espaco-medio);
+    }
+    
+    section {
+        padding: var(--espaco-medio);
+    }
+    
+    ul {
+        margin-left: var(--espaco-medio);
+    }
+}
