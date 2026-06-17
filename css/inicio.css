@@ -154,7 +154,6 @@ tfoot td {
 /* RODAPÉ DA PÁGINA */
 .rodape {
     text-align: center;
-    background-color: var(--cor-secundaria);
     padding: var(--espaco-extra);
     margin-top: var(--espaco-extra);
     border-radius: var(--borda-radius-grande);

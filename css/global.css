@@ -136,36 +136,7 @@ h2::after {
     font-size: 1.2em;
 }
 
-/* FOOTER com position relative */
-footer {
-    background-color: var(--cor-primaria);
-    color: var(--cor-branco);
-    text-align: center;
-    padding: var(--espaco-grande);
-    margin-top: var(--espaco-extra);
-    position: relative;
-}
 
-/* SLIDE 20 - POSITION: ABSOLUTE no footer (exemplo decorativo) */
-footer::before {
-    content: "🎵";
-    position: absolute;
-    left: var(--espaco-medio);
-    top: 50%;
-    transform: translateY(-50%);
-    opacity: 0.3;
-    font-size: 2rem;
-}
-
-footer::after {
-    content: "🎵";
-    position: absolute;
-    right: var(--espaco-medio);
-    top: 50%;
-    transform: translateY(-50%);
-    opacity: 0.3;
-    font-size: 2rem;
-}
 
 /* CARDS com position relative e hover */
 .artista-card {

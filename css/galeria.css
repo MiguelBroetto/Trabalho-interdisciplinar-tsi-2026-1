@@ -85,9 +85,12 @@
 .galeria-titulo h1::after {
     content: " 🎨";
 }
-#tituloGaleria{
+
+#tituloGaleria {
     color: black;
 }
+
+
 
 /* RESPONSIVO PARA GRID (apenas complementar) */
 @media (max-width: 768px) {
@@ -95,7 +98,7 @@
         padding: var(--espaco-medio);
         gap: var(--espaco-medio);
     }
-    
+
     .card-album img {
         height: 150px;
     }
