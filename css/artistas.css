@@ -68,8 +68,7 @@ a {
 }
 
 a:hover {
-    color: var(--cor-primaria-clara);
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 @media (max-width: 768px) {
